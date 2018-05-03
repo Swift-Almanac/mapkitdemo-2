@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BE5C87E8209A977F002DA6EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C87E7209A977F002DA6EF /* AppDelegate.swift */; };
-		BE5C87EA209A977F002DA6EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C87E9209A977F002DA6EF /* ViewController.swift */; };
-		BE5C87ED209A977F002DA6EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5C87EB209A977F002DA6EF /* Main.storyboard */; };
+		BE5C87EA209A977F002DA6EF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C87E9209A977F002DA6EF /* MapViewController.swift */; };
 		BE5C87EF209A9780002DA6EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE5C87EE209A9780002DA6EF /* Assets.xcassets */; };
-		BE5C87F2209A9780002DA6EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5C87F0209A9780002DA6EF /* LaunchScreen.storyboard */; };
+		BE5C87FA209A97AB002DA6EF /* default.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5C87F9209A97AB002DA6EF /* default.xib */; };
+		BE5C87FF209A97F1002DA6EF /* MyCoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5C87FE209A97F1002DA6EF /* MyCoreLocation.swift */; };
+		BEF2D7F5209AB89A009A7059 /* AppDelegate + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF2D7F4209AB89A009A7059 /* AppDelegate + Ext.swift */; };
+		BEF82380209AA6A3002E1B88 /* AppDelegate + CoreLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF8237F209AA6A3002E1B88 /* AppDelegate + CoreLoc.swift */; };
+		BEF82382209AA6FC002E1B88 /* MapViewController + MapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF82381209AA6FC002E1B88 /* MapViewController + MapKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE5C87E4209A977F002DA6EF /* mapkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5C87E4209A977F002DA6EF /* mapkitdemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapkitdemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5C87E7209A977F002DA6EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE5C87E9209A977F002DA6EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BE5C87EC209A977F002DA6EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE5C87E9209A977F002DA6EF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BE5C87EE209A9780002DA6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BE5C87F1209A9780002DA6EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE5C87F3209A9780002DA6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE5C87F9209A97AB002DA6EF /* default.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = default.xib; sourceTree = "<group>"; };
+		BE5C87FE209A97F1002DA6EF /* MyCoreLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoreLocation.swift; sourceTree = "<group>"; };
+		BEF2D7F4209AB89A009A7059 /* AppDelegate + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate + Ext.swift"; sourceTree = "<group>"; };
+		BEF8237F209AA6A3002E1B88 /* AppDelegate + CoreLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate + CoreLoc.swift"; sourceTree = "<group>"; };
+		BEF82381209AA6FC002E1B88 /* MapViewController + MapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController + MapKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +44,7 @@
 		BE5C87DB209A977F002DA6EF = {
 			isa = PBXGroup;
 			children = (
-				BE5C87E6209A977F002DA6EF /* mapkit */,
+				BE5C87E6209A977F002DA6EF /* mapkitdemo */,
 				BE5C87E5209A977F002DA6EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +52,57 @@
 		BE5C87E5209A977F002DA6EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE5C87E4209A977F002DA6EF /* mapkit.app */,
+				BE5C87E4209A977F002DA6EF /* mapkitdemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BE5C87E6209A977F002DA6EF /* mapkit */ = {
+		BE5C87E6209A977F002DA6EF /* mapkitdemo */ = {
 			isa = PBXGroup;
 			children = (
 				BE5C87E7209A977F002DA6EF /* AppDelegate.swift */,
-				BE5C87E9209A977F002DA6EF /* ViewController.swift */,
-				BE5C87EB209A977F002DA6EF /* Main.storyboard */,
-				BE5C87EE209A9780002DA6EF /* Assets.xcassets */,
-				BE5C87F0209A9780002DA6EF /* LaunchScreen.storyboard */,
 				BE5C87F3209A9780002DA6EF /* Info.plist */,
+				BE5C87FD209A97DA002DA6EF /* viewcontrollers */,
+				BE5C87FC209A97D3002DA6EF /* extensions */,
+				BE5C87FB209A97CD002DA6EF /* modals */,
+				BE5C87F9209A97AB002DA6EF /* default.xib */,
 			);
-			path = mapkit;
+			path = mapkitdemo;
+			sourceTree = SOURCE_ROOT;
+		};
+		BE5C87FB209A97CD002DA6EF /* modals */ = {
+			isa = PBXGroup;
+			children = (
+				BE5C87EE209A9780002DA6EF /* Assets.xcassets */,
+				BE5C87FE209A97F1002DA6EF /* MyCoreLocation.swift */,
+			);
+			path = modals;
+			sourceTree = "<group>";
+		};
+		BE5C87FC209A97D3002DA6EF /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BEF2D7F4209AB89A009A7059 /* AppDelegate + Ext.swift */,
+				BEF8237F209AA6A3002E1B88 /* AppDelegate + CoreLoc.swift */,
+				BEF82381209AA6FC002E1B88 /* MapViewController + MapKit.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		BE5C87FD209A97DA002DA6EF /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				BE5C87E9209A977F002DA6EF /* MapViewController.swift */,
+			);
+			path = viewcontrollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BE5C87E3209A977F002DA6EF /* mapkit */ = {
+		BE5C87E3209A977F002DA6EF /* mapkitdemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE5C87F6209A9780002DA6EF /* Build configuration list for PBXNativeTarget "mapkit" */;
+			buildConfigurationList = BE5C87F6209A9780002DA6EF /* Build configuration list for PBXNativeTarget "mapkitdemo" */;
 			buildPhases = (
 				BE5C87E0209A977F002DA6EF /* Sources */,
 				BE5C87E1209A977F002DA6EF /* Frameworks */,
@@ -79,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = mapkit;
+			name = mapkitdemo;
 			productName = mapkit;
-			productReference = BE5C87E4209A977F002DA6EF /* mapkit.app */;
+			productReference = BE5C87E4209A977F002DA6EF /* mapkitdemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +132,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BE5C87DF209A977F002DA6EF /* Build configuration list for PBXProject "mapkit" */;
+			buildConfigurationList = BE5C87DF209A977F002DA6EF /* Build configuration list for PBXProject "mapkitdemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +145,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE5C87E3209A977F002DA6EF /* mapkit */,
+				BE5C87E3209A977F002DA6EF /* mapkitdemo */,
 			);
 		};
 /* End PBXProject section */
@@ -122,9 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE5C87F2209A9780002DA6EF /* LaunchScreen.storyboard in Resources */,
 				BE5C87EF209A9780002DA6EF /* Assets.xcassets in Resources */,
-				BE5C87ED209A977F002DA6EF /* Main.storyboard in Resources */,
+				BE5C87FA209A97AB002DA6EF /* default.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,31 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE5C87EA209A977F002DA6EF /* ViewController.swift in Sources */,
+				BEF82380209AA6A3002E1B88 /* AppDelegate + CoreLoc.swift in Sources */,
+				BE5C87FF209A97F1002DA6EF /* MyCoreLocation.swift in Sources */,
+				BEF82382209AA6FC002E1B88 /* MapViewController + MapKit.swift in Sources */,
+				BE5C87EA209A977F002DA6EF /* MapViewController.swift in Sources */,
+				BEF2D7F5209AB89A009A7059 /* AppDelegate + Ext.swift in Sources */,
 				BE5C87E8209A977F002DA6EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BE5C87EB209A977F002DA6EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE5C87EC209A977F002DA6EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BE5C87F0209A9780002DA6EF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE5C87F1209A9780002DA6EF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BE5C87F4209A9780002DA6EF /* Debug */ = {
@@ -282,12 +299,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD65G8C4YP;
-				INFOPLIST_FILE = mapkit/Info.plist;
+				INFOPLIST_FILE = mapkitdemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftalmanac.mapkit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftalmanac.mapkitdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,12 +318,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WD65G8C4YP;
-				INFOPLIST_FILE = mapkit/Info.plist;
+				INFOPLIST_FILE = mapkitdemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.swiftalmanac.mapkit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftalmanac.mapkitdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BE5C87DF209A977F002DA6EF /* Build configuration list for PBXProject "mapkit" */ = {
+		BE5C87DF209A977F002DA6EF /* Build configuration list for PBXProject "mapkitdemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE5C87F4209A9780002DA6EF /* Debug */,
@@ -324,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE5C87F6209A9780002DA6EF /* Build configuration list for PBXNativeTarget "mapkit" */ = {
+		BE5C87F6209A9780002DA6EF /* Build configuration list for PBXNativeTarget "mapkitdemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE5C87F7209A9780002DA6EF /* Debug */,
