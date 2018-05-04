@@ -15,15 +15,18 @@ class MyCoreLocation {
     
     public private(set) var currentLocation: CLLocation
     public private(set) var currentPosition: CLLocationCoordinate2D
+    public private(set) var lastLocation: CLLocation
     
     private init() {
+        
         currentLocation = CLLocation(latitude: 0.0, longitude: 0.0)
         currentPosition = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)
+        lastLocation = CLLocation(latitude: 0.0, longitude: 0.0)
     }
     
     
     func setCurrentLocation(location: CLLocation) {
-        
+        lastLocation = currentLocation
         currentPosition = location.coordinate
         currentLocation = location
     }

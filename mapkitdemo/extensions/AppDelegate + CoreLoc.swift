@@ -16,11 +16,17 @@ extension AppDelegate: CLLocationManagerDelegate {
     
     func initLocationServices() {
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        locationManager.distanceFilter = 10.0
         locationManager.delegate = self
-        
         locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager.activityType = .automotiveNavigation
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.pausesLocationUpdatesAutomatically = false
+            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
+        }
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -77,7 +83,6 @@ extension AppDelegate: CLLocationManagerDelegate {
         }
         
         let locationAge: TimeInterval = -(newLocation.timestamp.timeIntervalSinceNow)
-        var oldLocation: CLLocation?
         
         // If the age of the location is too old, ignore the update.
         
@@ -92,18 +97,10 @@ extension AppDelegate: CLLocationManagerDelegate {
             print ("Invalid location accuracy. Rejected")
         }
         
-        if newLocation.horizontalAccuracy > 50.0 {
-            print ("Horizontal Accuracy too Broad")
+        if newLocation.horizontalAccuracy > 100.0 {
+            print ("Horizontal Accuracy too Broad: \(newLocation.horizontalAccuracy)")
         }
         
-        // Set the last OldLocation
-        
-        if locations.count > 1 {
-            oldLocation = (locations[locations.count-1])
-        } else {
-            oldLocation = nil
-        }
-                
         // Now we have an accurate coordinate !
         
         MyCoreLocation.shared.setCurrentLocation(location: newLocation)
@@ -117,7 +114,7 @@ extension AppDelegate: CLLocationManagerDelegate {
         } else {
             locationManager.allowsBackgroundLocationUpdates = true
             locationManager.startUpdatingLocation()
-            timer = Timer(timeInterval: 1.0, target: self, selector: #selector(saveLocation), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(saveLocation), userInfo: nil, repeats: true)
         }
     }
     
