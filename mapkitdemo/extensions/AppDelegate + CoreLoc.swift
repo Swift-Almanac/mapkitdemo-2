@@ -105,6 +105,14 @@ extension AppDelegate: CLLocationManagerDelegate {
         
         MyCoreLocation.shared.setCurrentLocation(location: newLocation)
         
+        guard let vc = AppDelegate.topViewController() else {return}
+        if vc is MapViewController {
+            let mapVC = vc as! MapViewController
+            if !mapVC.isZooming {
+                mapVC.centerMap()
+            }
+        }
+        
     }
     
     func startUpdatingLocation() {
